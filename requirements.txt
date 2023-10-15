@@ -1,0 +1,7 @@
+numpy
+openai
+transformers
+sentencepiece
+tqdm
+scikit-learn
+tiktoken
