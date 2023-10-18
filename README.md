@@ -92,7 +92,8 @@ python reflection_code/reflect_response_postprocess.py \
     --api_key xxx 
 ```
 
-
+Note: When reflecting on the instruction, please first combine the instruction and input (Alpaca format) into one single instruction. <br>
+Note: The extraction of reflection results is based on regular expression and, thus is not perfect. We will release the raw output before the extraction in the future. 
 
 ## Data and Model Weights V1
 
