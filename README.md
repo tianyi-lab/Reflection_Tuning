@@ -49,7 +49,7 @@ In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_
 
 1. Reflection
 ```
-python reflecn_instruction.py \
+python reflection_code/reflecn_instruction.py \
     --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
     --save_path cherry_alpaca_5_percent_reflect_ins_raw.json \
     --api_key xxx 
@@ -60,7 +60,7 @@ python reflecn_instruction.py \
 
 2. Extract the instruction-response pairs:
 ```
-python reflect_instruction_postprocess.py \
+python reflection_code/reflect_instruction_postprocess.py \
     --raw_data_path cherry_alpaca_5_percent_reflect_ins_raw.json \
     --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
     --save_path cherry_alpaca_5_percent_reflect_ins.json \
@@ -76,7 +76,7 @@ python reflect_instruction_postprocess.py \
 ### Reflection on Response
 1. Reflection
 ```
-python reflect_response.py \
+python reflection_code/reflect_response.py \
     --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
     --save_path cherry_alpaca_5_percent_reflect_res_raw.json \
     --api_key xxx 
@@ -84,7 +84,7 @@ python reflect_response.py \
 
 2. Extract the instruction-response pairs:
 ```
-python reflect_response_postprocess.py \
+python reflection_code/reflect_response_postprocess.py \
     --raw_data_path cherry_alpaca_5_percent_reflect_res_raw.json \
     --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
     --save_path cherry_alpaca_5_percent_reflect_res.json \

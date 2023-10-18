@@ -1,4 +1,4 @@
-python reflect_response_postprocess.py \
+python reflection_code/reflect_response_postprocess.py \
     --raw_data_path xxx_response.json \
     --ori_data_path xxx.json \
     --save_path xxx_res_post.json \
