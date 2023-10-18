@@ -8,9 +8,19 @@ The repo contains:
 - The model checkpoints that were trained using our data.
 - The code for recycling the data from the existing instruction-tuning dataset.
 
-
 ## News
 - [2023/10] We released codes for this project.
+
+## Contents
+- [Overview](#overview)
+- [Highlights](#highlights)
+- [Install](#install)
+- [Run Code](#run-code)
+- [Data and Model Weights V1](#data-and-model-weights-v1)
+- [Prompt and Hyperparameters](#prompt-and-hyperparameters)
+- [ToDo](#todo)
+- [Citation](#citation)
+
 
 ## Overview
 
@@ -20,18 +30,28 @@ However, a common problem with using LLMs as judges is the failure to obtain div
 To overcome this potential problem, inspired by Chain-of-Thought prompting, we further define several specific criteria for the oracle model to follow, and respond to those specific criteria with critical responses, respectively. 
 Then the responses to these criteria can serve as bridges (chain of thought) to generate new instruction-response pairs that are satisfied. 
 
+## Highlights
+
+* In Reflection-Tuning V1, we propose a reflection method that can improve the quality of the instruction-tuning dataset, which is a general method and can be utilized on almost ANY instruction-tuning dataset.
+* We implement our method on both [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [WizardLM](https://github.com/nlpxucan/WizardLM) datasets and release the newly-generated high-quality recycled datasets. 
+
 ## Install
 
 Install the dependencies with `pip install -r requirements.txt`
 
 ## Run Code
+#### Note: 
+Reflecting on the whole dataset containing dozens of thousands of data will consume a lot, so we recommend using some tiny datasets for the beginning, for example, cherry data from [Cherry LLM](https://github.com/MingLiiii/Cherry_LLM). Experiments show that simply reflecting on a subset of high-quality data can also get a promising performance. <br>
+In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_5_percent.json``` which contains only approximately 3k [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) data. 
 
 ### Reflection on Instruction
+
+
 1. Reflection
 ```
 python reflecn_instruction.py \
-    --data_path data/alpaca_data.json \
-    --save_path alpaca_reflected_instruction.json \
+    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --save_path cherry_alpaca_5_percent_reflect_ins_raw.json \
     --api_key xxx 
 ```
 ```--data_path```: The targeted dataset in the Alpaca format <br>
@@ -41,10 +61,10 @@ python reflecn_instruction.py \
 2. Extract the instruction-response pairs:
 ```
 python reflect_instruction_postprocess.py \
-    --raw_data_path alpaca_reflected_instruction.json \
-    --ori_data_path data/alpaca_data.json \
-    --save_path alpaca_ins_process.json \
-    --save_intermediate_path alpaca_ins_mid.json \
+    --raw_data_path cherry_alpaca_5_percent_reflect_ins_raw.json \
+    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --save_path cherry_alpaca_5_percent_reflect_ins.json \
+    --save_intermediate_path cherry_alpaca_5_percent_reflect_ins_mid.json \
     --api_key xxx 
 ```
 ```--raw_data_path```: The path that saves the raw reflection texts <br>
@@ -57,22 +77,22 @@ python reflect_instruction_postprocess.py \
 1. Reflection
 ```
 python reflect_response.py \
-    --data_path data/alpaca_data.json \
-    --save_path alpaca_reflected_response.json \
+    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --save_path cherry_alpaca_5_percent_reflect_res_raw.json \
     --api_key xxx 
 ```
 
 2. Extract the instruction-response pairs:
 ```
 python reflect_response_postprocess.py \
-    --raw_data_path alpaca_reflected_response.json \
-    --ori_data_path data/alpaca_data.json \
-    --save_path alpaca_res_process.json \
-    --save_intermediate_path alpaca_res_mid.json \
+    --raw_data_path cherry_alpaca_5_percent_reflect_res_raw.json \
+    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --save_path cherry_alpaca_5_percent_reflect_res.json \
+    --save_intermediate_path cherry_alpaca_5_percent_reflect_res_mid.json \
     --api_key xxx 
 ```
 
-Note: Reflecting on the whole alpaca dataset will consume a lot, so we recommend using some tiny datasets for the beginning. 
+
 
 ## Data and Model Weights V1
 
@@ -108,3 +128,7 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 - [ ] Release the code, data, and models. 
 - [ ] Train 13B models.
 - [ ] Release new versions.
+
+## Citation
+
+Please consider citing our paper if you think our codes, data, or models are useful. Thank you!
