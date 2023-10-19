@@ -103,20 +103,21 @@ Note: The extraction of reflection results is based on regular expression and, t
 
 ## Data and Model Weights V1
 
-The following table provides a comparison between our recycled models and baseline models on the Huggingface Open LLM Leaderboard and AlpacaEval Leaderboard. <br>
-The prompt and training hyperparameters can be found in the Hyperparameters section. 
-These results verify the effectiveness of our method, which can be used to improve the data samples for instruction tuning. <br>
+The following table provides a comparison between our recycled models and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
 
+The Recycled Alpaca Data can be found here: [[hf-Link]](https://huggingface.co/datasets/MingLiiii/recycled_alpaca_v1) <br>
+The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingface.co/datasets/MingLiiii/recycled_wiz70_v1) <br>
 
-|                          | **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **AlpacaEval** ||**Data**| **Model**|
-|--------------------------|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:--------------:|:-:|:-:|:-:|
-| **Alpaca 7B**      | 50.21       | 42.65   | 76.91         | 41.73   | 39.55          || 26.46          ||/|/|
-| **Recycled Alpaca 7B**     | 56.18| 53.92   | 77.68         | 47.55   | 45.55          || 76.99          ||[Link]|[Link]
-| **Recycled Alpaca 13B**     | 58.93| 58.70   | 80.80         | 53.11   | 43.12          || 83.42          ||[Link]|[Link]
-||||||||||||
-| **WizardLM 7B**    | 54.18       | 51.60   | 77.70         | 42.70   | 44.70          || 67.64          ||/|/|
-| **Recycled WizardLM 7B**  | 56.21       | 53.92   | 77.05         | 48.35   | 45.52         || 78.88          ||[Link]|[Link]
-||||||||||
+|                          | **AlpacaEval** || **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **Model**|
+|--------------------------|:--------------:|:-:|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:-:|
+| **Alpaca 7B**            | 26.46          || 50.21       | 42.65   | 76.91         | 41.73   | 39.55          ||/|
+| **Recycled Alpaca 7B**   | 76.99          || 56.18| 53.92   | 77.68         | 47.55   | 45.55          ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-alpaca-v1.0-7b)|
+| **Recycled Alpaca 13B**  | 83.42          || 58.93| 58.70   | 80.80         | 53.11   | 43.12          ||[Link]|
+|||||||||||
+| **WizardLM 7B**          | 67.64          || 54.18       | 51.60   | 77.70         | 42.70   | 44.70          ||/|
+| **Recycled WizardLM 7B** | 78.88          || 56.21       | 53.92   | 77.05         | 48.35   | 45.52         ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-wizardlm-v1.0-7b)|
+|||||||||
+
 
 ## Prompt and Hyperparameters
 
