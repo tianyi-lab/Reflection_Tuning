@@ -2,6 +2,10 @@
 
 [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
 
+<p align="center" width="40%">
+<a ><img src="images/alpaca1.jpg" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
 This is the repo for the Reflection-Tuning project, which introduces a reflection-based method to improve the quality of instruction-tuning data.
 
 The repo contains:
