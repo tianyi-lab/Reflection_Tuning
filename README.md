@@ -134,8 +134,8 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 | Recycled Models (13B) | 128 | 2e-5 | 3 | 2048 | 0 | 0.03 |
 
 ## ToDo
-- [ ] Release the code, data, and models. 
-- [ ] Train 13B models.
+- [x] Release the code, data, and models. 
+- [ ] Train and release 13B models.
 - [ ] Release new versions.
 
 ## Citation
