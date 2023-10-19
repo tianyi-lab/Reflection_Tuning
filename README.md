@@ -56,7 +56,7 @@ In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_
 1. Reflection
 ```
 python reflection_code/reflecn_instruction.py \
-    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
     --save_path cherry_alpaca_5_percent_reflect_ins_raw.json \
     --api_key xxx 
 ```
@@ -68,7 +68,7 @@ python reflection_code/reflecn_instruction.py \
 ```
 python reflection_code/reflect_instruction_postprocess.py \
     --raw_data_path cherry_alpaca_5_percent_reflect_ins_raw.json \
-    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
     --save_path cherry_alpaca_5_percent_reflect_ins.json \
     --save_intermediate_path cherry_alpaca_5_percent_reflect_ins_mid.json \
     --api_key xxx 
@@ -83,7 +83,7 @@ python reflection_code/reflect_instruction_postprocess.py \
 1. Reflection
 ```
 python reflection_code/reflect_response.py \
-    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
     --save_path cherry_alpaca_5_percent_reflect_res_raw.json \
     --api_key xxx 
 ```
@@ -92,13 +92,14 @@ python reflection_code/reflect_response.py \
 ```
 python reflection_code/reflect_response_postprocess.py \
     --raw_data_path cherry_alpaca_5_percent_reflect_res_raw.json \
-    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent.json \
+    --ori_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
     --save_path cherry_alpaca_5_percent_reflect_res.json \
     --save_intermediate_path cherry_alpaca_5_percent_reflect_res_mid.json \
     --api_key xxx 
 ```
 
-Note: When reflecting on the instruction, please first combine the instruction and input (Alpaca format) into one single instruction. <br>
+Note: When reflecting on the instruction, we first compress the instruction and input into one single instruction for easier processing by using chatGPT. 
+The whole compressed Alpaca data can be found in the data folder. <br>
 Note: The extraction of reflection results is based on regular expression and, thus is not perfect. We will release the raw output before the extraction in the future. 
 
 ## Data and Model Weights V1
