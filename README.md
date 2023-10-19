@@ -1,5 +1,7 @@
 # Reflection-Tuning
 
+[Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
+
 This is the repo for the Reflection-Tuning project, which introduces a reflection-based method to improve the quality of instruction-tuning data.
 
 The repo contains:
@@ -133,3 +135,13 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 ## Citation
 
 Please consider citing our paper if you think our codes, data, or models are useful. Thank you!
+```
+@misc{li2023reflectiontuning,
+      title={Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning}, 
+      author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Heng Huang and Jiuxiang Gu and Tianyi Zhou},
+      year={2023},
+      eprint={2310.11716},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
