@@ -1,4 +1,4 @@
-# Reflection-Tuning: A approach for data recycling
+# Reflection-Tuning: An Approach for Data Recycling
 
 [Paper V1] [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
 
