@@ -15,6 +15,7 @@ The repo contains:
 - The code for recycling the data from the existing instruction-tuning dataset.
 
 ## News
+- [2023/10] We released the V2 model and pushed models to the Alpaca Eval leaderboard. 
 - [2023/10] We released codes for this project.
 
 ## Contents
@@ -48,7 +49,7 @@ Install the dependencies with `pip install -r requirements.txt`
 ## Run Code
 #### Note: 
 Reflecting on the whole dataset containing dozens of thousands of data will consume a lot, so we recommend using some tiny datasets for the beginning, for example, cherry data from [Cherry LLM](https://github.com/MingLiiii/Cherry_LLM). Experiments show that simply reflecting on a subset of high-quality data can also get a promising performance. <br>
-In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_5_percent.json``` which contains only approximately 3k [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) data. 
+In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json``` which contains only approximately 3k [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) data. 
 
 ### Reflection on Instruction
 
@@ -98,13 +99,13 @@ python reflection_code/reflect_response_postprocess.py \
     --api_key xxx 
 ```
 
-Note: When reflecting on the instruction, we first compress the instruction and input into one single instruction for easier processing by using chatGPT. 
+Note: When reflecting on the instruction, we first compress the instruction and input it into one single instruction for easier processing by using chatGPT. 
 The whole compressed Alpaca data can be found in the data folder. <br>
 Note: The extraction of reflection results is based on regular expression and, thus is not perfect. We will release the raw output before the extraction in the future. 
 
 ## Data and Model Weights V1
 
-The following table provides a comparison between our recycled models and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
+The following table provides a comparison between our recycled models (V1) and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
 
 The Recycled Alpaca Data can be found here: [[hf-Link]](https://huggingface.co/datasets/MingLiiii/recycled_alpaca_v1) <br>
 The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingface.co/datasets/MingLiiii/recycled_wiz70_v1) <br>
@@ -112,13 +113,27 @@ The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingf
 |                          | **AlpacaEval** || **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **Model**|
 |--------------------------|:--------------:|:-:|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:-:|
 | **Alpaca 7B**            | 26.46          || 50.21       | 42.65   | 76.91         | 41.73   | 39.55          ||/|
-| **Recycled Alpaca 7B**   | 76.99          || 56.18| 53.92   | 77.68         | 47.55   | 45.55          ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-alpaca-v1.0-7b)|
-| **Recycled Alpaca 13B**  | 83.42          || 58.93| 58.70   | 80.80         | 53.11   | 43.12          ||[Link]|
+| **Recycled Alpaca 7B V1.0**   | 76.99          || 56.18| 53.92   | 77.68         | 47.55   | 45.55          ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-alpaca-v1.0-7b)|
+| **Recycled Alpaca 13B V1.0**  | 83.42          || 58.93| 58.70   | 80.80         | 53.11   | 43.12          ||[Link]|
 |||||||||||
 | **WizardLM 7B**          | 67.64          || 54.18       | 51.60   | 77.70         | 42.70   | 44.70          ||/|
-| **Recycled WizardLM 7B** | 78.88          || 56.21       | 53.92   | 77.05         | 48.35   | 45.52         ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-wizardlm-v1.0-7b)|
+| **Recycled WizardLM 7B V1.0** | 78.88          || 56.21       | 53.92   | 77.05         | 48.35   | 45.52         ||[[hf-Link]](https://huggingface.co/MingLiiii/recycled-wizardlm-v1.0-7b)|
 |||||||||
 
+## Data and Model Weights V2
+
+The following table provides a comparison between our recycled models (V2) and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
+
+The V2 Recycled Alpaca Data and WizardLM data, and the corresponding paper will be released soon. 
+
+|                          | **AlpacaEval** || **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **Model**|
+|--------------------------|:--------------:|:-:|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:-:|
+| **Alpaca 7B**            | 26.46          || 50.21       | 42.65   | 76.91         | 41.73   | 39.55          ||/|
+| **Recycled Alpaca 7B V2.0**   |     79.58      || |    |         |    |           |||
+|||||||||||
+| **WizardLM 7B**          | 67.64          || 54.18       | 51.60   | 77.70         | 42.70   | 44.70          ||/|
+| **Recycled WizardLM 7B V2.0** |     83.48      ||        |   |          |    |         |||
+|||||||||
 
 ## Prompt and Hyperparameters
 
@@ -134,9 +149,10 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 | Recycled Models (13B) | 128 | 2e-5 | 3 | 2048 | 0 | 0.03 |
 
 ## ToDo
-- [x] Release the code, data, and models. 
-- [ ] Train and release 13B models.
-- [ ] Release new versions.
+- [x] Release the code, data, and models.
+- [ ] Train and release V1 13B models.
+- [ ] Release the data and paper for V2 models. 
+- [ ] Train and release V2 13B models.
 
 ## Citation
 
