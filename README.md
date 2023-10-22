@@ -1,6 +1,6 @@
-# Reflection-Tuning
+# Reflection-Tuning: A approach for data recycling
 
-[Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
+[Paper V1] [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
 
 <p align="center" width="40%">
 <a ><img src="images/alpaca1.jpg" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
