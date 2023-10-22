@@ -118,7 +118,7 @@ The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingf
 | **Recycled Alpaca 13B V1.0**  | 83.42          || 58.93| 58.70   | 80.80         | 53.11   | 43.12          ||[Link]|
 |||||||||||
 | **WizardLM 7B**          | 67.64          || 54.18       | 51.60   | 77.70         | 42.70   | 44.70          ||/|
-| **Recycled WizardLM 7B V1.0** | 78.88          || 56.21       | 53.92   | 77.05         | 48.35   | 45.52         ||[[hf-Link]]https://huggingface.co/umd-zhou-lab/recycled-wizardlm-7b-v1.0)|
+| **Recycled WizardLM 7B V1.0** | 78.88          || 56.21       | 53.92   | 77.05         | 48.35   | 45.52         ||[[hf-Link]](https://huggingface.co/umd-zhou-lab/recycled-wizardlm-7b-v1.0)|
 |||||||||
 
 ## Data and Model Weights V2
