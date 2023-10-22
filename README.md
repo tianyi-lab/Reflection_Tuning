@@ -24,6 +24,7 @@ The repo contains:
 - [Install](#install)
 - [Run Code](#run-code)
 - [Data and Model Weights V1](#data-and-model-weights-v1)
+- [Data and Model Weights V2](#data-and-model-weights-v2)
 - [Prompt and Hyperparameters](#prompt-and-hyperparameters)
 - [ToDo](#todo)
 - [Citation](#citation)
