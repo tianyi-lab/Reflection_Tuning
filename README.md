@@ -130,10 +130,10 @@ The V2 Recycled Alpaca Data and WizardLM data, and the corresponding paper will 
 |                          | **AlpacaEval** || **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **Model**|
 |--------------------------|:--------------:|:-:|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:-:|
 | **Alpaca 7B**            | 26.46          || 50.21       | 42.65   | 76.91         | 41.73   | 39.55          ||/|
-| **Recycled Alpaca 7B V2.0**   |     79.58      || 56.05 |  54.01  |   78.07      |  46.69  |    45.41       |||
+| **Recycled Alpaca 7B V2.0**   |     79.58      || 56.05 |  54.01  |   78.07      |  46.69  |    45.41       ||[[hf-Link]](https://huggingface.co/umd-zhou-lab/recycled-alpaca-7b-v2.0)|
 |||||||||||
 | **WizardLM 7B**          | 67.64          || 54.18       | 51.60   | 77.70         | 42.70   | 44.70          ||/|
-| **Recycled WizardLM 7B V2.0** |     83.48      ||   56.79     |  54.78 |     77.86     |  45.63  |    48.91     |||
+| **Recycled WizardLM 7B V2.0** |     83.48      ||   56.79     |  54.78 |     77.86     |  45.63  |    48.91     ||[[hf-Link]](https://huggingface.co/umd-zhou-lab/recycled-wizardlm-7b-v2.0)|
 |||||||||
 
 ## Prompt and Hyperparameters
