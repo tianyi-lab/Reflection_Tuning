@@ -15,6 +15,7 @@ The repo contains:
 - The code for recycling the data from the existing instruction-tuning dataset.
 
 ## News
+- [2023/10] The V1 paper is accepted by the [NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following](https://an-instructive-workshop.github.io/)
 - [2023/10] We released the V2 model and pushed models to the Alpaca Eval leaderboard. 
 - [2023/10] We released codes for this project.
 
