@@ -53,11 +53,11 @@ To answer the above questions, we propose Selective Reflection-Tuning, in which 
 
 ## Highlights
 
-### Reflection-Tuning
+### Reflection-Tuning (V1)
 * In Reflection-Tuning V1, we propose a reflection method that can improve the quality of the instruction-tuning dataset, which is a general method and can be utilized on almost ANY instruction-tuning dataset.
 * We implement our method on both [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [WizardLM](https://github.com/nlpxucan/WizardLM) datasets and release the newly-generated high-quality recycled datasets.
 
-### Selective Reflection-Tuning
+### Selective Reflection-Tuning (V2)
 * We propose an interactive selection pipeline where the oracle model and student model cooperate to build a more coherent and model-compatible instruction-following dataset, which can be further adapted into other self-improvement scenarios.
 * Our selectively recycled data has a supreme quality, with only instruction tuning on a few thousand of automatically generated data, our models achieve promising performances compared to models with dozens of thousands of data.
 * We present a nuanced evaluation schema r-IFD that quantifies the efficacy and relevance of instruction-response pairs.
