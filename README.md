@@ -1,6 +1,7 @@
 # Reflection-Tuning: An Approach for Data Recycling
 
-[Paper V1] [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)
+[Paper V1] [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)<br>
+[Paper V2] Selective Reflection-Tuning (Under review)
 
 <p align="center" width="40%">
 <a ><img src="images/alpaca1.jpg" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
@@ -22,6 +23,7 @@ The repo contains:
 ## Contents
 - [Overview](#overview)
 - [Highlights](#highlights)
+- [Selective Reflection-Tuning](#selective-reflection-tuning)
 - [Install](#install)
 - [Run Code](#run-code)
 - [Data and Model Weights V1](#data-and-model-weights-v1)
@@ -33,16 +35,45 @@ The repo contains:
 
 ## Overview
 
+### Reflection-Tuning
 We propose a reflection-based method for improving the quality of instruction-response pairs. 
 Given the initial base dataset, we are motivated to generate a high-quality version of each data point with an oracle model, chatGPT for instance. 
 However, a common problem with using LLMs as judges is the failure to obtain diverse results. 
 To overcome this potential problem, inspired by Chain-of-Thought prompting, we further define several specific criteria for the oracle model to follow, and respond to those specific criteria with critical responses, respectively. 
 Then the responses to these criteria can serve as bridges (chain of thought) to generate new instruction-response pairs that are satisfied. 
 
+### Selective Reflection-Tuning
+In the original Reflection-Tuning, we propose a data improvement method through Reflection. 
+However, two research questions arise: <br>
+1. Is the teacher-refined data compatible with the needs of the student model?
+2. How does the student model decide which enhanced data are most needed and critical to its training?
+
+To answer the above questions, we propose Selective Reflection-Tuning, in which the student model can decide whether to accept the improvement of the teacher model. 
+
+
 ## Highlights
 
+### Reflection-Tuning
 * In Reflection-Tuning V1, we propose a reflection method that can improve the quality of the instruction-tuning dataset, which is a general method and can be utilized on almost ANY instruction-tuning dataset.
-* We implement our method on both [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [WizardLM](https://github.com/nlpxucan/WizardLM) datasets and release the newly-generated high-quality recycled datasets. 
+* We implement our method on both [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [WizardLM](https://github.com/nlpxucan/WizardLM) datasets and release the newly-generated high-quality recycled datasets.
+
+### Selective Reflection-Tuning
+* We propose an interactive selection pipeline where the oracle model and student model cooperate to build a more coherent and model-compatible instruction-following dataset, which can be further adapted into other self-improvement scenarios.
+* Our selectively recycled data has a supreme quality, with only instruction tuning on a few thousand of automatically generated data, our models achieve promising performances compared to models with dozens of thousands of data.
+* We present a nuanced evaluation schema r-IFD that quantifies the efficacy and relevance of instruction-response pairs.
+
+## Selective Reflection-Tuning
+
+### Introduction
+
+Existing methods of data enhancement usually do not take a critical criterion into account: **Is the teacher-refined data compatible with the needs of the student model?** These approaches typically do not account for the inherent randomness and potential degradation associated with the generative models' output, leading to an oversight in how the student model responds to these "improved" data samples. Consequently, a mechanism for the student model to selectively integrate these enhancements has been notably absent. To bridge this gap, our work introduces an interactive pipeline wherein an oracle generative model engages in a reflection process to enhance both the instruction and response of a data sample. The student model then evaluates whether to incorporate these improvements based on its unique attributes. This pipeline is versatile and can be adapted to various contexts where data enhancement is needed.
+
+Then, another pivotal question arises: **How does the student model decide which enhanced data are most needed and critical to its training?** This question underpins the challenge of autonomously evaluating the quality of instructions and responses. Common practices involve utilizing sophisticated models like GPT-4 for assessment purposes or employing a secondary judge model equipped with evaluative capabilities. These methods, however, present limitations: they fail to address the discrepancies between the evaluating model and the actual student model undergoing training. Particularly in the latter approach, even though the judge model and the student model share the same structural framework, their weight distributions diverge once endowed with basic evaluative functions. Consequently, the preferences of the judge model may not align with the real student model's requirements. To circumvent these issues, we adopt a statistical method, utilizing the Instruction-Following Difficulty (IFD) score proposed by [Cherry LLM](https://github.com/MingLiiii/Cherry_LLM). This score is derived directly from the raw student model, thereby mitigating potential domain shifts and ensuring that the evaluation is better aligned with the student model’s learning context. We further introduce a reversed version of IFD named reversed-IFD (r-IFD). This metric evaluates how much the response contributes to predicting the corresponding instruction.
+
+### Method
+
+### Results
+
 
 ## Install
 
@@ -124,6 +155,8 @@ The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingf
 
 ## Data and Model Weights V2
 
+In the repo, we name our Selective Reflection-Tuning as the V2 method for simplicity. 
+
 The following table provides a comparison between our recycled models (V2) and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
 
 The V2 Recycled Alpaca Data and WizardLM data, and the corresponding paper will be released soon. 
@@ -152,8 +185,7 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 
 ## ToDo
 - [x] Release the code, data, and models.
-- [ ] Train and release V1 13B models.
-- [ ] Release the data and paper for V2 models. 
+- [ ] Release the data and method for Selective Reflection-Tuning (V2). 
 - [ ] Train and release V2 13B models.
 
 ## Citation
