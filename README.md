@@ -15,6 +15,8 @@ The repo contains:
 - The model checkpoints that were trained using our data.
 - The code for recycling the data from the existing instruction-tuning dataset.
 
+(Feel free to email minglii@umd.edu for any questions or feedback.)
+
 ## News
 - [2023/12] We add the description of Selective Instruction-Tuning (V2 method).
 - [2023/10] The V1 paper is accepted by the [NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following](https://an-instructive-workshop.github.io/)
