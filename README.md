@@ -16,6 +16,7 @@ The repo contains:
 - The code for recycling the data from the existing instruction-tuning dataset.
 
 ## News
+- [2023/12] We add the description of Selective Instruction-Tuning (V2 method).
 - [2023/10] The V1 paper is accepted by the [NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following](https://an-instructive-workshop.github.io/)
 - [2023/10] We released the V2 model and pushed models to the Alpaca Eval leaderboard. 
 - [2023/10] We released codes for this project.
@@ -72,8 +73,27 @@ Then, another pivotal question arises: **How does the student model decide which
 
 ### Method
 
+<p align="center" width="80%">
+<a ><img src="images/reflection_main.png" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
+We utilize the IFD score to select reflected instructions and utilize the r-IFD score to select reflected responses. 
+
 ### Results
 
+Below are the performance results on the Alapca Eval leaderboard. “Data” represents the number of data used for fine-tuning. “RLHF/AIF” represents whether the model utilizes an additional RLHF or RLAIF process.
+
+<p align="center" width="80%">
+<a ><img src="images/compare_tbl.jpg" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
+Below are comparisons between model performances and data used for fine-tuning on the Alapca Eval benchmark and the open LLM leaderboard. We utilize star markers to represent our models, dot markers to represent other instruction-tuned models and triangle markers to represent RLHF/AIF models. Blue markers represent 7B models, red markers represent 13B models and purple markers represent models with lager weights.
+
+<p align="center" width="80%">
+<a ><img src="images/compare_fig.jpg" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
+**It is astonishing that with less than 1k automatically generated instruction samples (2%, 926 samples), our model achieves really promising performance (74.29 win rate on alpaca eval rate, 57.80 averaged score on Open LLM Leaderboard), showing the supreme quality of our sRecycled data.**
 
 ## Install
 
