@@ -204,9 +204,10 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 | Recycled Models (13B) | 128 | 2e-5 | 3 | 2048 | 0 | 0.03 |
 
 ## ToDo
-- [x] Release the code, data, and models.
-- [ ] Release the data and method for Selective Reflection-Tuning (V2). 
-- [ ] Train and release V2 13B models.
+- [x] Release the code, data, and models for V1.
+- [x] Release the method for Selective Reflection-Tuning (V2).
+- [ ] Release the data for Selective Reflection-Tuning (V2). 
+- [ ] Release the models for Selective Reflection-Tuning (V2). 
 
 ## Citation
 
