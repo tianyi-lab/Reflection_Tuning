@@ -35,14 +35,14 @@ The repo contains:
 
 ## Overview
 
-### Reflection-Tuning
+### Reflection-Tuning (V1)
 We propose a reflection-based method for improving the quality of instruction-response pairs. 
 Given the initial base dataset, we are motivated to generate a high-quality version of each data point with an oracle model, chatGPT for instance. 
 However, a common problem with using LLMs as judges is the failure to obtain diverse results. 
 To overcome this potential problem, inspired by Chain-of-Thought prompting, we further define several specific criteria for the oracle model to follow, and respond to those specific criteria with critical responses, respectively. 
 Then the responses to these criteria can serve as bridges (chain of thought) to generate new instruction-response pairs that are satisfied. 
 
-### Selective Reflection-Tuning
+### Selective Reflection-Tuning (V2)
 In the original Reflection-Tuning, we propose a data improvement method through Reflection. 
 However, two research questions arise: <br>
 1. Is the teacher-refined data compatible with the needs of the student model?
