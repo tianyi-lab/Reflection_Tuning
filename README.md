@@ -25,6 +25,7 @@ The repo contains:
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
+- [2023/12] We add the complete data of Selective Instruction-Tuning (V2 method) and add the evaluation results. 
 - [2023/12] We add the description of Selective Instruction-Tuning (V2 method).
 - [2023/10] The V1 paper is accepted by the [NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following](https://an-instructive-workshop.github.io/)
 - [2023/10] We released the V2 model and pushed models to the Alpaca Eval leaderboard. 
@@ -253,7 +254,7 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 ## ToDo
 - [x] Release the code, data, and models for V1.
 - [x] Release the method for Selective Reflection-Tuning (V2).
-- [ ] Release the data for Selective Reflection-Tuning (V2). 
+- [x] Release the data for Selective Reflection-Tuning (V2). 
 - [ ] Release the models for Selective Reflection-Tuning (V2). 
 
 ## Citation
