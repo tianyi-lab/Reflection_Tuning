@@ -53,6 +53,7 @@ To overcome this potential problem, inspired by Chain-of-Thought prompting, we f
 Then the responses to these criteria can serve as bridges (chain of thought) to generate new instruction-response pairs that are satisfied. 
 
 ### Selective Reflection-Tuning (V2)
+
 In the original Reflection-Tuning, we propose a data improvement method through Reflection. 
 However, two research questions arise: <br>
 1. Is the teacher-refined data compatible with the needs of the student model?
@@ -192,9 +193,18 @@ The Recycled WizardLM (70k) Data can be found here: [[hf-Link]](https://huggingf
 
 In the repo, we name our Selective Reflection-Tuning as the V2 method for simplicity. 
 
-The following table provides a comparison between our recycled models (V2) and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
+The following table provides a comparison between our sRecycled models (V2) and baseline models on the AlpacaEval Leaderboard and Huggingface Open LLM Leaderboard. <br>
 
-The V2 Recycled Alpaca Data and WizardLM data, and the corresponding paper will be released soon. 
+The data used for training llama2-7b model can be directly found here: <br>
+**Selective Recycled Data (V2)**: [Alpaca](https://huggingface.co/datasets/umd-zhou-lab/sRecycled_Alpaca), [WizardLM70k](https://huggingface.co/datasets/umd-zhou-lab/sRecycled_Wiz70)<br>
+The above data contains the model-selected data from data **reflected on both instruction and response** and data **reflected on response**.<br>
+
+The complete data reflected on instruction, response or both can be found here:<br>
+**Overall Reflected Data**: [Alpaca](https://huggingface.co/datasets/umd-zhou-lab/Reflect_Alpaca_All), [WizardLM70k](https://huggingface.co/datasets/umd-zhou-lab/Reflect_Wiz70_All), [WizardLM V2](https://huggingface.co/datasets/umd-zhou-lab/Reflect_WizV2_All)<br>
+
+The complete data statistics on (loss, and perplexity) on llama2-7b and llama2-13b model can be found here, which can be directly used for computing IFD scores:<br>
+**Overall Reflected Data IFD scores**:[Alpaca llama2 7b](https://huggingface.co/datasets/MingLiiii/Alpaca_Analysis_llama2_7b), [Alpaca llama2 13b](https://huggingface.co/datasets/MingLiiii/Alpaca_Analysis_llama2_13b), [WizardLM70k llama2 7b](https://huggingface.co/datasets/MingLiiii/Wiz70_Analysis_llama2_7b), [WizardLM70k llama2 13b](https://huggingface.co/datasets/MingLiiii/Wiz70_Analysis_llama2_13b)<br>
+
 
 |                          | **AlpacaEval** || **Avg** | **ARC** | **HellaSwag** | **MMLU** | **TruthfulQA** || **Model**|
 |--------------------------|:--------------:|:-:|:-----------:|:-------:|:-------------:|:-------:|:--------------:|:-:|:-:|
