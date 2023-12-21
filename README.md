@@ -83,13 +83,19 @@ We utilize the IFD score to select reflected instructions and utilize the r-IFD 
 
 ### Results
 
+Below is the performance for pair-wise comparison between our model and other classic models on the WizardLM test set. We follow the implementation from [AlpaGasus](https://github.com/Lichang-Chen/AlpaGasus) and [Cherry LLM](https://github.com/MingLiiii/Cherry_LLM), which greatly eliminates the potential position bias of GPT4. The prompts can be found in our [paper](https://arxiv.org/abs/2310.11716), and the data, code, and use cases for evaluation can be found in [Cherry LLM Repo](https://github.com/MingLiiii/Cherry_LLM?tab=readme-ov-file#evaluation). 
+
+<p align="center" width="80%">
+<a ><img src="images/compare_pair.jpg" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
 Below are the performance results on the Alapca Eval leaderboard. “Data” represents the number of data used for fine-tuning. “RLHF/AIF” represents whether the model utilizes an additional RLHF or RLAIF process.
 
 <p align="center" width="80%">
 <a ><img src="images/compare_tbl.jpg" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-Below are comparisons between model performances and data used for fine-tuning on the Alapca Eval benchmark and the open LLM leaderboard. We utilize star markers to represent our models, dot markers to represent other instruction-tuned models and triangle markers to represent RLHF/AIF models. Blue markers represent 7B models, red markers represent 13B models and purple markers represent models with lager weights.
+Below are comparisons between model performances and data used for fine-tuning on the Alapca Eval benchmark and the open LLM leaderboard. We utilize star markers to represent our models, dot markers to represent other instruction-tuned models and triangle markers to represent RLHF/AIF models. Blue markers represent 7B models, red markers represent 13B models and purple markers represent models with larger weights.
 
 <p align="center" width="80%">
 <a ><img src="images/compare_fig.jpg" alt="overview" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
