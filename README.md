@@ -35,7 +35,8 @@ The repo contains:
 - [Highlights](#highlights)
 - [Selective Reflection-Tuning](#selective-reflection-tuning)
 - [Install](#install)
-- [Run Code](#run-code)
+- [Code for Reflection](#code-for-reflection)
+- [Code for Selection](#code-for-selection)
 - [Data and Model Weights V1](#data-and-model-weights-v1)
 - [Data and Model Weights V2](#data-and-model-weights-v2)
 - [Prompt and Hyperparameters](#prompt-and-hyperparameters)
@@ -115,7 +116,7 @@ Below are comparisons between model performances and data used for fine-tuning o
 
 Install the dependencies with `pip install -r requirements.txt`
 
-## Run Code
+## Code for Reflection
 #### Note: 
 Reflecting on the whole dataset containing dozens of thousands of data will consume a lot, so we recommend using some tiny datasets for the beginning, for example, cherry data from [Cherry LLM](https://github.com/MingLiiii/Cherry_LLM). Experiments show that simply reflecting on a subset of high-quality data can also get a promising performance. <br>
 In the below scripts, we directly run on ```data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json``` which contains only approximately 3k [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) data. 
@@ -171,6 +172,27 @@ python reflection_code/reflect_response_postprocess.py \
 Note: When reflecting on the instruction, we first compress the instruction and input it into one single instruction for easier processing by using chatGPT. 
 The whole compressed Alpaca data can be found in the data folder. <br>
 Note: The extraction of reflection results is based on regular expression and, thus is not perfect. We will release the raw output before the extraction in the future. 
+
+## Code for Selection
+
+1. Generate Data Statistics
+```
+python selection_code/data_analysis.py \
+    --data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
+    --save_path cherry_alpaca_5_percent_analysis.jsonl \
+    --model_name_or_path meta-llama/Llama-2-7b-hf 
+```
+This code calculates the necessary statistics for calculating IFD scores and r-IFD scores. <br>
+Please feel free to customize your own training prompt and model. 
+
+2. Put the Statistics to Original Data
+```
+python selection_code/put_analysis_to_data.py \
+    --pt_data_path cherry_alpaca_5_percent_analysis.jsonl \
+    --json_data_path data/cherry_alpaca_v1/cherry_alpaca_5_percent_compressed.json \
+    --json_save_path cherry_alpaca_5_percent_with_analysis.json 
+```
+After obtaining data with IFD scores and r-IFD scores, you can compare these scores to make the customized selection. 
 
 ## Data and Model Weights V1
 
