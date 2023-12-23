@@ -261,12 +261,12 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 
 Please consider citing our paper if you think our codes, data, or models are useful. Thank you!
 ```
-@misc{li2023reflectiontuning,
-      title={Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning}, 
-      author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Heng Huang and Jiuxiang Gu and Tianyi Zhou},
-      year={2023},
-      eprint={2310.11716},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{Li2023ReflectionTuningDR,
+  title={Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning},
+  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Heng Huang and Jiuxiang Gu and Tianyi Zhou},
+  journal={ArXiv},
+  year={2023},
+  volume={abs/2310.11716},
+  url={https://api.semanticscholar.org/CorpusID:264288970}
 }
 ```
