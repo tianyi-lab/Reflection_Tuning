@@ -1,7 +1,7 @@
 # Reflection-Tuning: An Approach for Data Recycling
 
 [Paper V1] [Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning](https://arxiv.org/abs/2310.11716)<br>
-[Paper V2] Selective Reflection-Tuning (Under review)
+[Paper V2] [Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning](https://arxiv.org/abs/2402.10110)
 
 <p align="center" width="40%">
 <a ><img src="images/alpaca1.jpg" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
@@ -25,6 +25,7 @@ The repo contains:
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
+- [2024/02] We release the paper of our Selective Reflection-Tuning.
 - [2023/12] We add the complete data of Selective Instruction-Tuning (V2 method) and add the evaluation results. 
 - [2023/12] We add the description of Selective Instruction-Tuning (V2 method).
 - [2023/10] The V1 paper is accepted by the [NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following](https://an-instructive-workshop.github.io/)
@@ -261,6 +262,15 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 
 Please consider citing our paper if you think our codes, data, or models are useful. Thank you!
 ```
+@misc{li2024selective,
+      title={Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning}, 
+      author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Jiuxiang Gu and Tianyi Zhou},
+      year={2024},
+      eprint={2402.10110},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
 @article{Li2023ReflectionTuningDR,
   title={Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning},
   author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Heng Huang and Jiuxiang Gu and Tianyi Zhou},
@@ -270,3 +280,4 @@ Please consider citing our paper if you think our codes, data, or models are use
   url={https://api.semanticscholar.org/CorpusID:264288970}
 }
 ```
+
