@@ -262,13 +262,22 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 
 Please consider citing our paper if you think our codes, data, or models are useful. Thank you!
 ```
-@misc{li2024selective,
-      title={Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning}, 
-      author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Jiuxiang Gu and Tianyi Zhou},
-      year={2024},
-      eprint={2402.10110},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{Li2024SelectiveRS,
+  title={Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning},
+  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Jiuxiang Gu and Tianyi Zhou},
+  journal={ArXiv},
+  year={2024},
+  volume={abs/2402.10110},
+  url={https://api.semanticscholar.org/CorpusID:267682220}
+}
+
+@article{Li2023FromQT,
+  title={From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning},
+  author={Ming Li and Yong Zhang and Zhitao Li and Jiuhai Chen and Lichang Chen and Ning Cheng and Jianzong Wang and Tianyi Zhou and Jing Xiao},
+  journal={ArXiv},
+  year={2023},
+  volume={abs/2308.12032},
+  url={https://api.semanticscholar.org/CorpusID:261076515}
 }
 
 @article{Li2023ReflectionTuningDR,
