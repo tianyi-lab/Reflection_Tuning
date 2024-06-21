@@ -295,13 +295,12 @@ Please consider citing our paper if you think our codes, data, or models are use
     pages = "7595--7628",
 }
 
-@inproceedings{
-li2023reflectiontuning,
-title={Reflection-Tuning: Recycling Data for Better Instruction-Tuning},
-author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Tianyi Zhou},
-booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
-year={2023},
-url={https://openreview.net/forum?id=xaqoZZqkPU}
+@inproceedings{li2023reflectiontuning,
+  title={Reflection-Tuning: Recycling Data for Better Instruction-Tuning},
+  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Tianyi Zhou},
+  booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
+  year={2023},
+  url={https://openreview.net/forum?id=xaqoZZqkPU}
 }
 
 @article{Li2024SuperfilteringWD,
