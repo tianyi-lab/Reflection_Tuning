@@ -25,6 +25,7 @@ The repo contains:
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
+- [2024/05] Our paper has been accepted to the **ACL 2024** findings! 
 - [2024/02] We release the paper of our Selective Reflection-Tuning.
 - [2023/12] We add the complete data of Selective Instruction-Tuning (V2 method) and add the evaluation results. 
 - [2023/12] We add the description of Selective Instruction-Tuning (V2 method).
@@ -271,22 +272,36 @@ Please consider citing our paper if you think our codes, data, or models are use
   url={https://api.semanticscholar.org/CorpusID:267682220}
 }
 
-@article{Li2023FromQT,
-  title={From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning},
-  author={Ming Li and Yong Zhang and Zhitao Li and Jiuhai Chen and Lichang Chen and Ning Cheng and Jianzong Wang and Tianyi Zhou and Jing Xiao},
-  journal={ArXiv},
-  year={2023},
-  volume={abs/2308.12032},
-  url={https://api.semanticscholar.org/CorpusID:261076515}
+@inproceedings{li-etal-2024-quantity,
+    title = "From Quantity to Quality: Boosting {LLM} Performance with Self-Guided Data Selection for Instruction Tuning",
+    author = "Li, Ming  and
+      Zhang, Yong  and
+      Li, Zhitao  and
+      Chen, Jiuhai  and
+      Chen, Lichang  and
+      Cheng, Ning  and
+      Wang, Jianzong  and
+      Zhou, Tianyi  and
+      Xiao, Jing",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-long.421",
+    pages = "7595--7628",
 }
 
-@article{Li2023ReflectionTuningDR,
-  title={Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning},
-  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Heng Huang and Jiuxiang Gu and Tianyi Zhou},
-  journal={ArXiv},
-  year={2023},
-  volume={abs/2310.11716},
-  url={https://api.semanticscholar.org/CorpusID:264288970}
+@inproceedings{
+li2023reflectiontuning,
+title={Reflection-Tuning: Recycling Data for Better Instruction-Tuning},
+author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Tianyi Zhou},
+booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
+year={2023},
+url={https://openreview.net/forum?id=xaqoZZqkPU}
 }
 ```
 
