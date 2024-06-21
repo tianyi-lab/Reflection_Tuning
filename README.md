@@ -303,5 +303,15 @@ booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following
 year={2023},
 url={https://openreview.net/forum?id=xaqoZZqkPU}
 }
+
+@article{Li2024SuperfilteringWD,
+  title={Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning},
+  author={Ming Li and Yong Zhang and Shwai He and Zhitao Li and Hongyu Zhao and Jianzong Wang and Ning Cheng and Tianyi Zhou},
+  journal={ArXiv},
+  year={2024},
+  volume={abs/2402.00530},
+  url={https://api.semanticscholar.org/CorpusID:267365346}
+}
+
 ```
 
