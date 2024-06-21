@@ -257,7 +257,7 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 - [x] Release the code, data, and models for V1.
 - [x] Release the method for Selective Reflection-Tuning (V2).
 - [x] Release the data for Selective Reflection-Tuning (V2). 
-- [ ] Release the models for Selective Reflection-Tuning (V2). 
+- [x] Release the models for Selective Reflection-Tuning (V2). 
 
 ## Citation
 
